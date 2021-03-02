@@ -1,0 +1,49 @@
+Lab activity 1– GPIO
+Write modular program to read the status of the switch and write high/low status to GPIO output pin
+as per below table based upon API’s mentioned.
+Switch-I Switch-II LED 1 state LED 2 state
+open open LOW LOW
+open close LOW HIGH
+close open HIGH LOW
+close close Toggle LED for
+every 1 sec
+Toggle LED for
+every 1 sec
+Below API or functions need to be designed to test application.
+
+
+GPIOConfig(Pin, mode)
+Purpose: The function is used to configure the mode of the pin.
+Pin: The Atmega328P port pin which need to be configured.
+Mode: direction of the pin in INPUT or OUTPUT. In case of INPUT, the mode is required to be
+configured for PULLUP configuration along with INPUT.
+
+
+GPIOPinRead(Pin)
+Purpose: The function returns the state (0 or 1) of the input pin.
+Pin: The Atmega328P port pin which need to be read.
+Return value: 0 or 1
+
+
+GPIOPinWrite(pin, state)
+Purpose: The function is used to write LOW or HIGH state to GPIO pin.
+Pin: The Atmega328P pin used to write LOW or HIGH state.
+State: LOW or HIGH
+
+
+
+Modular program guidelines:
+GPIO.h: This file contains
+function prototype declarations
+defined macro
+extern variable declaration if any
+typedef for variables
+GPIO.c: This file contains
+Function definitions, variable definitions
+Static functions declaration and definitions
+Static variables, macros
+The files need to be submitted in the zip folder having unique ID:
+• Module Implementation files [.c files] and corresponding header files [.h files]
+• Main program [.c file] to test as per problem statement
+• .HEX file
+• Simulation circuit [ .simu file] 
